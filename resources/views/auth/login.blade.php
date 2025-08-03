@@ -14,6 +14,14 @@
         <span id="demo-password">********</span>
         <button type="button" class="btn btn-sm btn-outline-secondary ms-2" onclick="togglePassword()">Show</button>
     </div>
+
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        {{ $errors->first() }}
+    </div>
+    @endif
+
+
     @if(session('error'))
     <div class="alert alert-danger">{{ session('error') }}</div>
     @endif
